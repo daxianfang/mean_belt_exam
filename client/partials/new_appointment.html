@@ -1,0 +1,9 @@
+<h2>New Appointment</h2>
+<form ng-submit='ac.createAppointment()'>
+	<label>Date: <input type="date" min="{{ Date.now() }}" ng-model='ac.appointment.date'></label>
+	<label>Time: <input type="time" min="08:00" max="17:00" ng-model='ac.appointment.time'></label>
+	<input type="hidden" ng-model='ac.appointment.patient'>
+	<label>Complain: <textarea placeholder="Complain must be at least 10 characters" rows="10" cols="30" ng-model='ac.appointment.complain'></textarea></label>
+	<button>Cancel</button>
+	<input type="submit" value="Add Appointment">
+</form>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+	<head>
+		<title></title>
+		<script src="/angular/angular.min.js"></script>
+    	<script src="/angular-route/angular-route.min.js"></script>
+    	<script src="/angular-cookies/angular-cookies.min.js"></script>
+    	<script src="app/app.js"></script>
+
+    	<script src="/app/controllers/userController.js"></script>
+    	<script src="/app/controllers/appointmentController.js"></script>
+
+    	<script src="/app/factories/userFactory.js"></script>
+    	<script src="/app/factories/appointmentFactory.js"></script>
+	</head>
+	<body ng-controller='userController as userCtrl'>
+		{{$cookies.user_id}}
+		<a href="#!/register">Register</a> | <a href="#!/login">Login</a>
+		<div ng-view></div>
+	</body>
+</html>
